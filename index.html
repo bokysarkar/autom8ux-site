@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>autom8ux</title>
+<link rel="icon" type="image/svg+xml" href="./brand-assets/02-autom8ux-logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:#1B774F;color:#FFFFFF;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#BEFFE9;text-decoration:none}
+a:hover{color:#FFFFFF}
+input::placeholder{color:rgba(11,42,29,0.45)}
+footer input::placeholder{color:rgba(255,255,255,0.55)}
+</style>
+</helmet>
+
+<div id="top" style="position:relative;overflow-x:hidden;background:#1B774F;">
+
+<!-- NAV -->
+<header style="position:fixed;top:16px;left:0;right:0;z-index:50;display:flex;justify-content:center;padding:0 16px;pointer-events:none;">
+  <nav style="pointer-events:auto;width:100%;max-width:1120px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 8px 8px 18px;background:rgba(19,83,55,0.66);backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(190,255,233,0.45);border-radius:999px;box-shadow:0 0 0 1px rgba(190,255,233,0.05), 0 24px 48px -24px rgba(5,25,16,0.22), 0 2px 6px rgba(5,25,16,0.04);">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;color:#FFFFFF;">
+      <img src="./brand-assets/03-autom8ux-full-white.svg" alt="{{ agencyName }}" width="162" height="36" style="display:block;height:30px;width:auto;">
+    </a>
+    <sc-if value="{{ showLinks }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;align-items:center;gap:30px;font-size:15px;font-weight:500;">
+        <a href="#offers" style="color:rgba(255,255,255,0.9);" style-hover="color:#FFFFFF;">Offers</a>
+        <a href="#pricing" style="color:rgba(255,255,255,0.9);" style-hover="color:#FFFFFF;">Pricing</a>
+        <a href="#faq" style="color:rgba(255,255,255,0.9);" style-hover="color:#FFFFFF;">FAQ</a>
+      </div>
+    </sc-if>
+    <a href="https://autom8ux.zohobookings.in/487651000000032046" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:11px 20px;border-radius:999px;background:#BEFFE9;color:#10452F;font-size:14px;font-weight:600;box-shadow:0 8px 20px -8px rgba(190,255,233,0.6), inset 0 1px 0 rgba(255,255,255,0.25);" style-hover="background:#FFFFFF;color:#10452F;">Book a call</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section style="position:relative;padding:clamp(128px,14vw,176px) 0 72px;background:radial-gradient(ellipse 85% 75% at 62% 38%,#228C5D 0%,rgba(27,119,79,0.6) 50%,rgba(27,119,79,0) 80%),linear-gradient(180deg,#10452F 0%,#1B774F 100%);">
+  <div style="position:absolute;top:-180px;right:-160px;width:720px;height:720px;border-radius:50%;background:radial-gradient(closest-side,rgba(34,140,93,0.40),rgba(34,140,93,0));pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-120px;left:-220px;width:620px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(34,140,93,0.55),rgba(34,140,93,0));pointer-events:none;"></div>
+  <div style="position:absolute;top:120px;left:30%;width:420px;height:300px;border-radius:50%;background:radial-gradient(closest-side,rgba(190,255,233,0.30),rgba(190,255,233,0));pointer-events:none;"></div>
+
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;align-items:center;gap:56px;">
+    <div style="flex:1 1 440px;min-width:0;">
+      <h1 style="margin:0;font-size:clamp(44px,6vw,76px);line-height:0.98;letter-spacing:-0.045em;font-weight:600;color:#FFFFFF;text-wrap:balance;">Let AI build your product’s screens, <span style="color:#BEFFE9;">and have them look like you made them.</span></h1>
+      <p style="margin:26px 0 0;max-width:520px;font-size:19px;line-height:1.55;color:rgba(255,255,255,0.74);text-wrap:pretty;">We train AI tools like Cursor and Claude on your brand and UI rules, so anyone on your team can ship new screens in days, without waiting on a designer.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;">
+        <a href="https://autom8ux.zohobookings.in/487651000000032046" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:15px 24px;border-radius:999px;background:#BEFFE9;color:#10452F;font-size:15px;font-weight:600;box-shadow:0 10px 24px -10px rgba(190,255,233,0.7), inset 0 1px 0 rgba(255,255,255,0.25);" style-hover="background:#FFFFFF;color:#10452F;">Book a 20-minute call <span style="opacity:0.8;">→</span></a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:22px;font-size:15px;font-weight:500;color:#FFFFFF;"><svg width="20" height="20" viewBox="0 0 20 20" style="flex-shrink:0;"><path d="M10 1.5l7 2.6v5.2c0 4.3-2.9 7.6-7 9.2-4.1-1.6-7-4.9-7-9.2V4.1l7-2.6z" fill="#BEFFE9"></path><path d="M6.6 10.1l2.3 2.2 4.5-4.6" stroke="#10452F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>No upfront cost until you see the system working.</div>
+    </div>
+
+    <!-- hero composition -->
+    <div style="flex:1 1 460px;min-width:0;display:flex;justify-content:center;">
+      <div style="position:relative;width:100%;max-width:560px;height:600px;">
+        <div style="position:absolute;left:39px;top:44px;bottom:70px;width:4px;background-image:radial-gradient(circle,rgba(190,255,233,0.55) 1.2px,rgba(0,0,0,0) 1.6px);background-size:4px 8px;background-repeat:repeat-y;"></div>
+        <!-- nodes -->
+        <div style="position:absolute;left:0;top:28px;z-index:4;display:flex;align-items:center;">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;font-size:12px;font-weight:600;background:{{ n0Bg }};color:{{ n0Fg }};border:1px solid {{ n0Bd }};box-shadow:0 4px 12px -6px rgba(5,25,16,0.3);transition:all .4s ease;">Design</span>
+          <span style="width:22px;height:4px;background-image:radial-gradient(circle,rgba(190,255,233,0.55) 1.2px,rgba(0,0,0,0) 1.6px);background-size:7px 4px;background-repeat:repeat-x;"></span>
+        </div>
+        <div style="position:absolute;left:3px;top:238px;z-index:4;display:flex;align-items:center;">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;font-size:12px;font-weight:600;background:{{ n1Bg }};color:{{ n1Fg }};border:1px solid {{ n1Bd }};box-shadow:0 4px 12px -6px rgba(5,25,16,0.3);transition:all .4s ease;">Code</span>
+          <span style="width:30px;height:4px;background-image:radial-gradient(circle,rgba(190,255,233,0.55) 1.2px,rgba(0,0,0,0) 1.6px);background-size:7px 4px;background-repeat:repeat-x;"></span>
+        </div>
+        <div style="position:absolute;left:12px;top:428px;z-index:4;display:flex;align-items:center;">
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;font-size:12px;font-weight:600;background:{{ n2Bg }};color:{{ n2Fg }};border:1px solid {{ n2Bd }};box-shadow:0 4px 12px -6px rgba(5,25,16,0.3);transition:all .4s ease;">AI</span>
+          <span style="width:40px;height:4px;background-image:radial-gradient(circle,rgba(190,255,233,0.55) 1.2px,rgba(0,0,0,0) 1.6px);background-size:7px 4px;background-repeat:repeat-x;"></span>
+        </div>
+
+        <!-- card 1: figma tokens -->
+        <div style="position:absolute;left:96px;right:8px;top:0;z-index:1;transform:rotate(-1.6deg);padding:14px;background:rgba(19,83,55,0.7);backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(190,255,233,0.45);border-radius:22px;box-shadow:0 0 0 1px rgba(190,255,233,0.05), 0 24px 48px -24px rgba(5,25,16,0.28), 0 2px 6px rgba(5,25,16,0.04);">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:2px 4px 10px;border-bottom:1px solid rgba(190,255,233,0.07);">
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#FFFFFF;"><span style="width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#BEFFE9,#48AC32);"></span>Local variables</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.74);">Brand · Light ▾</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;">
+            
+            <div style="display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:9px;color:rgba(255,255,255,0.9);"><span style="width:14px;height:14px;border-radius:4px;background:#FFFFFF;"></span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">color/text/primary</span><span style="color:rgba(255,255,255,0.74);">#FFFFFF</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:9px;color:#FFFFFF;background:{{ tokenRowBg }};border:1px solid rgba(190,255,233,0.4);transition:background .4s ease;"><span style="width:14px;height:14px;border-radius:4px;background:#BEFFE9;box-shadow:0 0 0 2px #135337, 0 0 0 3px #BEFFE9;"></span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500;">color/accent/primary</span><span style="color:rgba(255,255,255,0.6);text-decoration:line-through;">#3A7A63</span><span style="color:#BEFFE9;font-weight:500;">#BEFFE9</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:9px;color:rgba(255,255,255,0.9);"><span style="width:14px;height:14px;border-radius:4px;background:#135337;border:1px solid rgba(190,255,233,0.45);"></span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">color/surface/card</span><span style="color:rgba(255,255,255,0.74);">#135337</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:9px;color:rgba(255,255,255,0.9);"><span style="width:14px;height:14px;border-radius:4px;border:1.5px solid rgba(190,255,233,0.7);border-top-left-radius:8px;"></span><span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">radius/card</span><span style="color:rgba(255,255,255,0.74);">24</span></div>
+          </div>
+        </div>
+
+        <!-- card 2: storybook -->
+        <div style="position:absolute;left:128px;right:-6px;top:196px;z-index:2;transform:rotate(1.4deg);overflow:hidden;background:rgba(19,83,55,0.74);backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(190,255,233,0.45);border-radius:22px;box-shadow:0 0 0 1px rgba(190,255,233,0.05), 0 24px 48px -24px rgba(5,25,16,0.3), 0 2px 6px rgba(5,25,16,0.04);">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid rgba(190,255,233,0.07);">
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#FFFFFF;"><span style="width:14px;height:14px;border-radius:4px;background:#48AC32;"></span>Button / Primary</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(255,255,255,0.74);">{{ codeStatus }}</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:10px;height:96px;background-color:#10452F;background-image:radial-gradient(circle,rgba(190,255,233,0.10) 1px,rgba(0,0,0,0) 1.2px);background-size:12px 12px;">
+            <span style="padding:9px 16px;border-radius:999px;background:{{ buttonBg }};color:#10452F;font-size:12.5px;font-weight:600;transition:background .5s ease;">Get started</span>
+            <span style="padding:9px 16px;border-radius:999px;background:#176543;border:1px solid rgba(190,255,233,0.12);color:#FFFFFF;font-size:12.5px;font-weight:600;">Cancel</span>
+          </div>
+          <div style="display:flex;gap:18px;padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(255,255,255,0.74);">
+            <span>variant: <span style="color:#FFFFFF;">primary</span></span>
+            <span>size: <span style="color:#FFFFFF;">md</span></span>
+            <span style="display:inline-flex;align-items:center;gap:6px;">disabled <span style="display:inline-flex;width:22px;height:12px;border-radius:999px;background:#3A7A63;padding:2px;"><span style="width:8px;height:8px;border-radius:50%;background:#176543;"></span></span></span>
+          </div>
+        </div>
+
+        <!-- card 3: AI chat -->
+        <div style="position:absolute;left:104px;right:28px;top:392px;z-index:3;transform:rotate(-1deg);padding:14px;background:rgba(19,83,55,0.78);backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(190,255,233,0.45);border-radius:22px;box-shadow:0 0 0 1px rgba(190,255,233,0.05), 0 28px 56px -24px rgba(5,25,16,0.34), 0 2px 6px rgba(5,25,16,0.04);">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:0 4px 10px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#FFFFFF;"><span style="width:14px;height:14px;border-radius:50%;background:#48AC32;"></span>Claude · app/</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.74);">reads design-rules.md</div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;"><span style="max-width:80%;padding:8px 12px;border-radius:14px 14px 4px 14px;background:#BEFFE9;color:#10452F;font-size:12px;">Add a billing settings screen.</span></div>
+          <div style="display:flex;gap:10px;margin-top:10px;align-items:stretch;">
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;padding:10px;border-radius:14px;background:#10452F;">
+              <span style="font-size:11.5px;color:rgba(255,255,255,0.9);line-height:1.4;">{{ aiStatus }}</span>
+              <span style="height:5px;border-radius:999px;background:rgba(190,255,233,0.08);overflow:hidden;"><span style="display:block;height:100%;width:{{ aiProgress }};background:#BEFFE9;transition:width 1.2s ease;"></span></span>
+            </div>
+            <div style="width:112px;flex-shrink:0;border-radius:12px;background:#176543;border:1px solid rgba(190,255,233,0.08);padding:8px;display:flex;flex-direction:column;gap:5px;">
+              <span style="height:5px;width:50%;border-radius:3px;background:#BEFFE9;"></span>
+              <span style="height:4px;width:80%;border-radius:3px;background:#3A7A63;"></span>
+              <span style="display:flex;align-items:center;justify-content:space-between;margin-top:2px;"><span style="height:4px;width:44%;border-radius:3px;background:#3A7A63;"></span><span style="width:18px;height:10px;border-radius:999px;background:{{ screenAccent }};transition:background .5s ease;"></span></span>
+              <span style="margin-top:2px;align-self:flex-start;padding:3px 8px;border-radius:999px;background:{{ screenAccent }};color:#10452F;font-size:8px;font-weight:600;transition:background .5s ease;">Save</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="position:relative;margin:64px auto 0;max-width:1200px;padding:0 24px;text-align:center;font-size:14px;color:rgba(255,255,255,0.74);letter-spacing:0.01em;">Works with Figma · Storybook · Claude · Cursor</p>
+</section>
+
+<!-- EXPLAINER (hidden for now: remove "display:none;" from the section style to show it again) -->
+<section id="explainer" style="display:none;position:relative;padding:clamp(80px,10vw,136px) 0 0;background:#F2FFF9;scroll-margin-top:72px;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div data-reveal="" style="text-align:center;">
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.72);border:1px solid rgba(27,119,79,0.18);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1B774F;">The service</span>
+      <h2 style="margin:20px 0 0;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-0.04em;font-weight:600;color:#0B2A1D;text-wrap:balance;">What we do, in two minutes.</h2>
+    </div>
+    <div data-reveal="" style="max-width:960px;margin:56px auto 0;padding:10px;background:#FFFFFF;border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07);">
+      <div style="position:relative;aspect-ratio:16 / 9;border-radius:16px;background:linear-gradient(150deg,#E6F8EF 0%,#DDF5EA 60%,#FFFFFF 100%);display:flex;align-items:center;justify-content:center;">
+        <span style="position:absolute;top:14px;left:14px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,0.85);border:1px solid rgba(27,119,79,0.08);font-size:11.5px;font-weight:600;color:#1F3D30;">Video placeholder · Service explainer</span>
+        <span style="display:flex;align-items:center;justify-content:center;width:84px;height:84px;border-radius:50%;background:#1B774F;box-shadow:0 16px 32px -12px rgba(27,119,79,0.5);"><span style="width:0;height:0;border-left:20px solid #FFFFFF;border-top:12px solid rgba(0,0,0,0);border-bottom:12px solid rgba(0,0,0,0);margin-left:5px;"></span></span>
+        <span style="position:absolute;bottom:14px;right:14px;padding:4px 9px;border-radius:999px;background:rgba(11,42,29,0.85);color:#FFFFFF;font-family:'JetBrains Mono',monospace;font-size:11px;">2:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section style="position:relative;padding:clamp(80px,10vw,136px) 0;background:#F2FFF9;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;" data-reveal="">
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.72);border:1px solid rgba(27,119,79,0.18);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1B774F;">The problem</span>
+      <h2 style="margin:20px 0 0;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-0.04em;font-weight:600;color:#0B2A1D;text-wrap:balance;">Sound familiar?</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:56px;">
+      <div data-reveal="" data-delay="0" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:220px;padding:28px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <span style="font-size:40px;line-height:0.6;color:#1B774F;font-weight:600;">“</span>
+        <p style="margin:0;font-size:20px;line-height:1.38;letter-spacing:-0.015em;font-weight:500;color:#1F3D30;text-wrap:pretty;">Every new screen looks a little different, and takes a week to build.</p>
+      </div>
+      <div data-reveal="" data-delay="80" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:220px;padding:28px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <span style="font-size:40px;line-height:0.6;color:#1B774F;font-weight:600;">“</span>
+        <p style="margin:0;font-size:20px;line-height:1.38;letter-spacing:-0.015em;font-weight:500;color:#1F3D30;text-wrap:pretty;">Cursor and Claude generate UI we end up redoing.</p>
+      </div>
+      <div data-reveal="" data-delay="160" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:220px;padding:28px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <span style="font-size:40px;line-height:0.6;color:#1B774F;font-weight:600;">“</span>
+        <p style="margin:0;font-size:20px;line-height:1.38;letter-spacing:-0.015em;font-weight:500;color:#1F3D30;text-wrap:pretty;">We shipped AI features, and almost nobody uses them.</p>
+      </div>
+      <div data-reveal="" data-delay="240" style="display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:220px;padding:28px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <span style="font-size:40px;line-height:0.6;color:#1B774F;font-weight:600;">“</span>
+        <p style="margin:0;font-size:20px;line-height:1.38;letter-spacing:-0.015em;font-weight:500;color:#1F3D30;text-wrap:pretty;">Our developers end up deciding the design.</p>
+      </div>
+    </div>
+    <p data-reveal="" style="margin:64px auto 0;text-align:center;font-size:clamp(22px,2.4vw,30px);line-height:1.3;letter-spacing:-0.025em;font-weight:500;color:#0B2A1D;text-wrap:balance;">Using AI isn’t the problem. <span style="color:#1B774F;">It just doesn’t know your brand.</span></p>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section id="offers" style="position:relative;padding:clamp(80px,10vw,136px) 0;scroll-margin-top:72px;background:linear-gradient(180deg,#F2FFF9 0%,#E6F8EF 50%,#F2FFF9 100%);">
+  <div style="position:absolute;top:10%;left:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(27,119,79,0.35),rgba(34,140,93,0));pointer-events:none;"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div data-reveal="" style="max-width:760px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.72);border:1px solid rgba(27,119,79,0.18);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1B774F;">Offers</span>
+      <h2 style="margin:20px 0 0;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-0.04em;font-weight:600;color:#0B2A1D;text-wrap:balance;">Start with the problem you have today.</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px;margin-top:56px;">
+      <!-- AI-Ready System -->
+      <article data-reveal="" data-delay="0" style="display:flex;flex-direction:column;padding:10px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <div style="position:relative;height:210px;overflow:hidden;border-radius:16px;background:linear-gradient(160deg,#E6F8EF 0%,#FFFFFF 100%);padding:22px 22px 0;">
+          <div style="border-radius:12px 12px 0 0;background:#DDF5EA;border:1px solid rgba(27,119,79,0.08);border-bottom:0;box-shadow:0 12px 28px -16px rgba(11,42,29,0.09);height:100%;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-bottom:1px solid rgba(27,119,79,0.07);font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#4A6457;"><span>design-rules.md</span><span style="display:inline-flex;align-items:center;gap:5px;color:#1B774F;"><span style="width:6px;height:6px;border-radius:50%;background:#1B774F;"></span>MCP connected</span></div>
+            <div style="padding:10px 12px;font-family:'JetBrains Mono',monospace;font-size:10.5px;line-height:1.75;color:#1F3D30;">
+              <div style="color:#0B2A1D;font-weight:500;">## Buttons</div>
+              <div>- Import <span style="color:#1B774F;">Button</span> from @ui</div>
+              <div>- Never hard-code colors</div>
+              <div>- Accent: <span style="padding:1px 5px;border-radius:4px;background:rgba(27,119,79,0.14);color:#1B774F;">color.accent.primary</span></div>
+              <div style="color:#4A6457;">- Max one primary per view</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;flex:1;padding:22px 16px 14px;">
+          <p style="margin:0;font-size:14px;font-style:italic;color:#4A6457;">“Every screen AI builds looks slightly different from the last.”</p>
+          <h3 style="margin:0;font-size:24px;letter-spacing:-0.025em;font-weight:600;color:#0B2A1D;">Make AI Build Like You</h3>
+          <p style="margin:0;font-size:15px;line-height:1.5;color:#4A6457;">We turn your brand and UI into rules that AI tools like Cursor and Claude can read and follow.</p>
+          <div style="display:flex;gap:9px;align-items:flex-start;font-size:15px;line-height:1.45;color:#1F3D30;"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px;"><circle cx="9" cy="9" r="9" fill="#1B774F"></circle><path d="M5.2 9.3l2.4 2.3 5-5" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>New screens come out on-brand, with no designer cleanup.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid rgba(27,119,79,0.07);">
+            <span style="font-size:14px;color:#4A6457;">From <span style="font-size:17px;font-weight:600;color:#0B2A1D;">$1,500</span> (audit)</span>
+            <a href="#cta" style="font-size:14px;font-weight:600;color:#1B774F;" style-hover="color:#10452F;">Start with this →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- AI Trust Sprint -->
+      <article data-reveal="" data-delay="80" style="display:flex;flex-direction:column;padding:10px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <div style="position:relative;height:210px;overflow:hidden;border-radius:16px;background:linear-gradient(160deg,#E6F8EF 0%,#FFFFFF 100%);padding:22px;">
+          <div style="display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:12px;background:#DDF5EA;border:1px solid rgba(27,119,79,0.08);box-shadow:0 12px 28px -16px rgba(11,42,29,0.09);">
+            <div style="font-size:11px;font-weight:600;color:#0B2A1D;">Agent · Refund request #4821</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#1F3D30;"><span style="width:14px;height:14px;border-radius:50%;background:#1B774F;color:#FFFFFF;font-size:9px;display:flex;align-items:center;justify-content:center;">✓</span>Read 3 sources <span style="margin-left:auto;padding:1px 6px;border-radius:999px;background:rgba(27,119,79,0.14);color:#1B774F;font-size:9.5px;">policy.pdf</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#1F3D30;"><span style="width:14px;height:14px;border-radius:50%;background:#1B774F;color:#FFFFFF;font-size:9px;display:flex;align-items:center;justify-content:center;">✓</span>Drafted reply and refund</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#0B2A1D;font-weight:500;"><span style="width:14px;height:14px;border-radius:50%;border:1.5px solid #1B774F;"></span>Review before sending</div>
+            <div style="display:flex;gap:6px;margin-top:2px;"><span style="padding:6px 12px;border-radius:999px;background:#1B774F;color:#FFFFFF;font-size:10.5px;font-weight:600;">Approve</span><span style="padding:6px 12px;border-radius:999px;border:1px solid rgba(27,119,79,0.12);color:#0B2A1D;font-size:10.5px;font-weight:600;">Edit</span><span style="padding:6px 10px;color:#4A6457;font-size:10.5px;">↶ Undo</span></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;flex:1;padding:22px 16px 14px;">
+          <p style="margin:0;font-size:14px;font-style:italic;color:#4A6457;">“Nobody uses our AI feature.”</p>
+          <h3 style="margin:0;font-size:24px;letter-spacing:-0.025em;font-weight:600;color:#0B2A1D;">AI Trust Sprint</h3>
+          <p style="margin:0;font-size:15px;line-height:1.5;color:#4A6457;">Redesign of one AI flow: visible steps, sources, undo, review before acting.</p>
+          <div style="display:flex;gap:9px;align-items:flex-start;font-size:15px;line-height:1.45;color:#1F3D30;"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px;"><circle cx="9" cy="9" r="9" fill="#1B774F"></circle><path d="M5.2 9.3l2.4 2.3 5-5" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>More repeat use.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid rgba(27,119,79,0.07);">
+            <span style="font-size:14px;color:#4A6457;">From <span style="font-size:17px;font-weight:600;color:#0B2A1D;">$6,000</span></span>
+            <a href="#cta" style="font-size:14px;font-weight:600;color:#1B774F;" style-hover="color:#10452F;">Start with this →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Design-to-Code Foundation -->
+      <article data-reveal="" data-delay="160" style="display:flex;flex-direction:column;padding:10px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <div style="position:relative;height:210px;overflow:hidden;border-radius:16px;background:linear-gradient(160deg,#E6F8EF 0%,#FFFFFF 100%);padding:22px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;height:100%;">
+            <div style="display:flex;flex-direction:column;justify-content:center;gap:8px;padding:12px;border-radius:12px;background:#DDF5EA;border:1px solid rgba(27,119,79,0.08);">
+              <span style="align-self:flex-start;padding:6px 12px;border-radius:999px;background:#1B774F;color:#FFFFFF;font-size:10.5px;font-weight:600;">Primary</span>
+              <span style="align-self:flex-start;padding:6px 12px;border-radius:999px;border:1px solid rgba(27,119,79,0.12);color:#0B2A1D;font-size:10.5px;font-weight:600;">Secondary</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A6457;">Button · 2 variants</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="flex:1;display:flex;align-items:center;justify-content:space-between;padding:0 12px;border-radius:12px;background:#DDF5EA;border:1px solid rgba(27,119,79,0.08);font-size:10.5px;color:#1F3D30;">Auto-sync<span style="display:inline-flex;justify-content:flex-end;width:26px;height:15px;border-radius:999px;background:#1B774F;padding:2px;"><span style="width:11px;height:11px;border-radius:50%;background:#DDF5EA;"></span></span></div>
+              <div style="flex:1;display:flex;align-items:center;padding:0 12px;border-radius:12px;background:#DDF5EA;border:1px solid rgba(27,119,79,0.08);"><span style="flex:1;padding:6px 8px;border-radius:7px;border:1px solid #1B774F;box-shadow:0 0 0 3px rgba(27,119,79,0.14);font-size:10px;color:#4A6457;">name@company.com</span></div>
+              <div style="flex:1;display:flex;align-items:center;gap:5px;padding:0 12px;border-radius:12px;background:#DDF5EA;border:1px solid rgba(27,119,79,0.08);"><span style="padding:3px 8px;border-radius:999px;background:rgba(27,119,79,0.14);color:#1B774F;font-size:9.5px;font-weight:600;">Active</span><span style="padding:3px 8px;border-radius:999px;background:#A8CFBE;color:#4A6457;font-size:9.5px;">Draft</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;flex:1;padding:22px 16px 14px;">
+          <p style="margin:0;font-size:14px;font-style:italic;color:#4A6457;">“Every screen looks different and ships slowly.”</p>
+          <h3 style="margin:0;font-size:24px;letter-spacing:-0.025em;font-weight:600;color:#0B2A1D;">Design Once, Reuse Everywhere</h3>
+          <p style="margin:0;font-size:15px;line-height:1.5;color:#4A6457;">We turn your UI into a library of ready-made building blocks, so your team and your AI tools build from the same parts every time.</p>
+          <div style="display:flex;gap:9px;align-items:flex-start;font-size:15px;line-height:1.45;color:#1F3D30;"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px;"><circle cx="9" cy="9" r="9" fill="#1B774F"></circle><path d="M5.2 9.3l2.4 2.3 5-5" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>New screens in days, not weeks.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid rgba(27,119,79,0.07);">
+            <span style="font-size:14px;color:#4A6457;">From <span style="font-size:17px;font-weight:600;color:#0B2A1D;">$15,000</span></span>
+            <a href="#cta" style="font-size:14px;font-weight:600;color:#1B774F;" style-hover="color:#10452F;">Start with this →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:16px;">
+      <!-- MVP Cleanup -->
+      <article data-reveal="" data-delay="0" style="display:flex;flex-direction:column;padding:10px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <div style="height:120px;display:flex;align-items:center;justify-content:center;gap:14px;border-radius:16px;background:linear-gradient(160deg,#E6F8EF 0%,#FFFFFF 100%);">
+          <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-start;">
+            <span style="padding:4px 10px;border-radius:3px;background:#A8CFBE;color:#FFFFFF;font-size:9.5px;">Submit</span>
+            <span style="padding:5px 14px;border-radius:999px;background:#228C5D;color:#FFFFFF;font-size:10px;font-weight:700;transform:rotate(-2deg);">SAVE</span>
+            <span style="padding:3px 8px;border-radius:8px;background:#48AC32;color:#FFFFFF;font-size:9px;">Continue</span>
+          </div>
+          <span style="color:#4A6457;font-size:16px;">→</span>
+          <span style="padding:8px 16px;border-radius:999px;background:#1B774F;color:#FFFFFF;font-size:11px;font-weight:600;box-shadow:0 8px 16px -8px rgba(27,119,79,0.35);">Save</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;flex:1;padding:18px 14px 12px;">
+          <p style="margin:0;font-size:14px;font-style:italic;color:#4A6457;">“Our AI-built MVP is a visual mess.”</p>
+          <h3 style="margin:0;font-size:19px;letter-spacing:-0.02em;font-weight:600;color:#0B2A1D;">Existing UI Cleanup</h3>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:12px;">
+            <span style="font-size:14px;color:#4A6457;">From <span style="font-weight:600;color:#0B2A1D;">$1,500</span> (assessment)</span>
+            <a href="#cta" style="font-size:14px;font-weight:600;color:#1B774F;" style-hover="color:#10452F;">Start with this →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Activation Redesign -->
+      <article data-reveal="" data-delay="80" style="display:flex;flex-direction:column;padding:10px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <div style="height:120px;display:flex;align-items:center;justify-content:center;border-radius:16px;background:linear-gradient(160deg,#E6F8EF 0%,#FFFFFF 100%);padding:16px 24px;">
+          <div style="width:100%;max-width:220px;padding:10px 12px;border-radius:12px;background:#DDF5EA;border:1px solid rgba(27,119,79,0.08);">
+            <div style="display:flex;justify-content:space-between;font-size:9.5px;color:#4A6457;"><span>Week-1 retention</span><span style="color:#1B774F;font-weight:600;">↑</span></div>
+            <svg viewBox="0 0 200 50" width="100%" height="50" preserveAspectRatio="none" style="display:block;margin-top:4px;"><path d="M0 40 L40 42 L80 36 L120 26 L160 16 L200 8" fill="none" stroke="#1B774F" stroke-width="2" vector-effect="non-scaling-stroke"></path><path d="M0 40 L40 42 L80 36 L120 26 L160 16 L200 8 L200 50 L0 50 Z" fill="rgba(27,119,79,0.10)"></path></svg>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;flex:1;padding:18px 14px 12px;">
+          <p style="margin:0;font-size:14px;font-style:italic;color:#4A6457;">“Users sign up and don't come back.”</p>
+          <h3 style="margin:0;font-size:19px;letter-spacing:-0.02em;font-weight:600;color:#0B2A1D;">Activation Redesign</h3>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:12px;">
+            <span style="font-size:14px;color:#4A6457;">From <span style="font-weight:600;color:#0B2A1D;">$2,000</span> (discovery)</span>
+            <a href="#cta" style="font-size:14px;font-weight:600;color:#1B774F;" style-hover="color:#10452F;">Start with this →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Launch Page -->
+      <article data-reveal="" data-delay="160" style="display:flex;flex-direction:column;padding:10px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <div style="height:120px;display:flex;align-items:flex-end;justify-content:center;border-radius:16px;background:linear-gradient(160deg,#E6F8EF 0%,#FFFFFF 100%);padding:18px 28px 0;overflow:hidden;">
+          <div style="width:100%;max-width:220px;height:100%;padding:10px 12px;border-radius:10px 10px 0 0;background:#DDF5EA;border:1px solid rgba(27,119,79,0.08);border-bottom:0;display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="width:20px;height:5px;border-radius:3px;background:#1B774F;"></span><span style="width:24px;height:7px;border-radius:999px;background:#1B774F;"></span></div>
+            <span style="height:7px;width:78%;border-radius:3px;background:#1B774F;margin-top:6px;"></span>
+            <span style="height:7px;width:56%;border-radius:3px;background:#1B774F;"></span>
+            <span style="height:4px;width:70%;border-radius:3px;background:#A8CFBE;"></span>
+            <span style="align-self:flex-start;width:40px;height:10px;border-radius:999px;background:#1B774F;margin-top:2px;"></span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;flex:1;padding:18px 14px 12px;">
+          <p style="margin:0;font-size:14px;font-style:italic;color:#4A6457;">“Our site doesn't explain what we do.”</p>
+          <h3 style="margin:0;font-size:19px;letter-spacing:-0.02em;font-weight:600;color:#0B2A1D;">Launch Page</h3>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:12px;">
+            <span style="font-size:14px;color:#4A6457;">From <span style="font-weight:600;color:#0B2A1D;">$3,500</span></span>
+            <a href="#cta" style="font-size:14px;font-weight:600;color:#1B774F;" style-hover="color:#10452F;">Start with this →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="position:relative;padding:clamp(80px,10vw,136px) 0;background:#F2FFF9;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:56px;">
+    <div data-reveal="" style="flex:1 1 360px;min-width:0;">
+      <div style="position:sticky;top:120px;">
+        <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.72);border:1px solid rgba(27,119,79,0.18);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1B774F;">How it works</span>
+        <h2 style="margin:20px 0 0;font-size:clamp(34px,4.6vw,56px);line-height:1.02;letter-spacing:-0.04em;font-weight:600;color:#0B2A1D;text-wrap:balance;">From first look to a system your team owns, in four steps.</h2>
+      </div>
+    </div>
+    <div style="flex:1.3 1 460px;min-width:0;display:flex;flex-direction:column;">
+      <sc-for list="{{ steps }}" as="step" hint-placeholder-count="4">
+        <div data-step="{{ $index }}" style="display:flex;flex-direction:column;">
+          <sc-if value="{{ step.notFirst }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;align-items:center;width:10px;margin-left:40px;padding:4px 0;">
+              <span style="width:7px;height:7px;border-radius:50%;background:#DDF5EA;border:1.5px solid rgba(27,119,79,0.35);"></span>
+              <span data-draw="" style="width:4px;height:52px;background-image:radial-gradient(circle,rgba(27,119,79,0.35) 1.2px,rgba(0,0,0,0) 1.6px);background-size:4px 8px;background-repeat:repeat-y;"></span>
+              <span style="width:7px;height:7px;border-radius:50%;background:#DDF5EA;border:1.5px solid rgba(27,119,79,0.35);"></span>
+            </div>
+          </sc-if>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;">
+            <div style="flex:0 0 auto;display:flex;align-items:center;gap:12px;min-width:236px;padding:12px 18px 12px 12px;border-radius:999px;background:{{ step.pillBg }};border:1px solid {{ step.pillBd }};box-shadow:{{ step.pillShadow }};transition:all .45s ease;">
+              <span style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:{{ step.numBg }};color:{{ step.numFg }};font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;transition:all .45s ease;">{{ step.num }}</span>
+              <span style="display:flex;flex-direction:column;gap:1px;">
+                <span style="font-size:10.5px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:{{ step.kindFg }};transition:color .45s ease;">{{ step.kind }}</span>
+                <span style="font-size:17px;font-weight:600;letter-spacing:-0.015em;color:{{ step.titleFg }};transition:color .45s ease;">{{ step.title }}</span>
+              </span>
+              <span style="margin-left:auto;padding-left:10px;font-size:12.5px;color:{{ step.metaFg }};transition:color .45s ease;">{{ step.meta }}</span>
+            </div>
+            <div style="flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:8px;">
+              <p style="margin:0;font-size:16px;line-height:1.5;color:{{ step.descFg }};transition:color .45s ease;text-wrap:pretty;">{{ step.desc }}</p>
+              <sc-if value="{{ step.note }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font-size:15px;line-height:1.5;font-weight:600;color:#1B774F;text-wrap:pretty;">{{ step.note }}</p></sc-if>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US (blue) -->
+<section style="position:relative;padding:clamp(88px,11vw,144px) 0;background:radial-gradient(ellipse 80% 90% at 50% 45%,#228C5D 0%,#176543 55%,#10452F 100%);overflow:hidden;">
+  <div style="position:absolute;top:-220px;right:-180px;width:640px;height:640px;border-radius:50%;background:radial-gradient(closest-side,rgba(190,255,233,0.12),rgba(190,255,233,0));pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-260px;left:-160px;width:600px;height:600px;border-radius:50%;background:radial-gradient(closest-side,rgba(16,69,47,0.5),rgba(16,69,47,0));pointer-events:none;"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div data-reveal="" style="max-width:900px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(19,83,55,0.6);border:1px solid rgba(190,255,233,0.5);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#BEFFE9;">Why us</span>
+      <h2 style="margin:20px 0 0;font-size:clamp(34px,4.6vw,60px);line-height:1.04;letter-spacing:-0.04em;font-weight:600;color:#FFFFFF;text-wrap:balance;">Most agencies hand over screens. We hand over the system that makes them.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:56px;">
+      <sc-for list="{{ comparisons }}" as="row" hint-placeholder-count="5">
+        <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;">
+          <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-radius:20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);">
+            <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#BEFFE9;">Typical agency</span>
+            <span style="font-size:17px;line-height:1.45;color:rgba(255,255,255,0.88);">{{ row.typical }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-radius:20px;background:#135337;border:1px solid rgba(190,255,233,0.55);box-shadow:0 20px 40px -24px rgba(5,25,16,0.6);">
+            <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#BEFFE9;">{{ agencyName }}</span>
+            <span style="display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.45;font-weight:500;color:#FFFFFF;"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:3px;"><circle cx="9" cy="9" r="9" fill="#BEFFE9"></circle><path d="M5.2 9.3l2.4 2.3 5-5" stroke="#10452F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>{{ row.ours }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="position:relative;padding:clamp(80px,10vw,136px) 0;scroll-margin-top:72px;background:#F2FFF9;">
+  <div style="position:absolute;top:20%;right:-200px;width:560px;height:560px;border-radius:50%;background:radial-gradient(closest-side,rgba(27,119,79,0.35),rgba(34,140,93,0));pointer-events:none;"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div data-reveal="" style="text-align:center;">
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.72);border:1px solid rgba(27,119,79,0.18);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1B774F;">Pricing</span>
+      <h2 style="margin:20px 0 0;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-0.04em;font-weight:600;color:#0B2A1D;">Clear starting points.</h2>
+      <p style="margin:18px auto 0;max-width:600px;font-size:18px;line-height:1.55;color:#4A6457;text-wrap:pretty;">Every project is scoped on a short call. You get a fixed estimate within 48 hours, no obligation.</p>
+      <span style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:8px 16px;border-radius:999px;background:#FFFFFF;border:1px solid rgba(27,119,79,0.35);font-size:15px;font-weight:600;color:#10452F;"><svg width="18" height="18" viewBox="0 0 20 20" style="flex-shrink:0;"><path d="M10 1.5l7 2.6v5.2c0 4.3-2.9 7.6-7 9.2-4.1-1.6-7-4.9-7-9.2V4.1l7-2.6z" fill="#1B774F"></path><path d="M6.6 10.1l2.3 2.2 4.5-4.6" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>No upfront cost until you see the system working.</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-top:56px;align-items:stretch;">
+      <div data-reveal="" data-delay="0" style="display:flex;flex-direction:column;gap:22px;padding:32px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <h3 style="margin:0;font-size:24px;letter-spacing:-0.025em;font-weight:600;color:#0B2A1D;">Start small</h3>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#1F3D30;text-wrap:pretty;">A first look at your brand and screens, plus a demo of AI building on-brand UI. Credited toward a bigger project.</p>
+        <a href="https://autom8ux.zohobookings.in/487651000000032046" target="_blank" rel="noopener" style="margin-top:auto;display:flex;justify-content:center;padding:13px 20px;border-radius:999px;background:rgba(0,0,0,0);border:1.5px solid #1B774F;color:#1B774F;font-size:15px;font-weight:600;" style-hover="background:rgba(27,119,79,0.12);color:#1B774F;">Book a call</a>
+      </div>
+      <div data-reveal="" data-delay="80" style="position:relative;display:flex;flex-direction:column;gap:22px;padding:32px;background:rgba(255,255,255,0.82);backdrop-filter:blur(20px) saturate(140%);border:1.5px solid #1B774F;border-radius:24px;box-shadow:0 0 0 4px rgba(27,119,79,0.08), 0 28px 56px -24px rgba(27,119,79,0.35), 0 2px 6px rgba(11,42,29,0.01);">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          <h3 style="margin:0;font-size:24px;letter-spacing:-0.025em;font-weight:600;color:#0B2A1D;">Build the system</h3>
+          <span style="padding:4px 10px;border-radius:999px;background:rgba(27,119,79,0.14);color:#1B774F;font-size:12px;font-weight:600;">Core</span>
+        </div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#1F3D30;text-wrap:pretty;">Reusable building blocks and rules your AI tools follow, set up in Figma and in your code, with one real feature rebuilt as proof.</p>
+        <a href="https://autom8ux.zohobookings.in/487651000000032046" target="_blank" rel="noopener" style="margin-top:auto;display:flex;justify-content:center;padding:13px 20px;border-radius:999px;background:#1B774F;color:#FFFFFF;font-size:15px;font-weight:600;box-shadow:0 10px 24px -10px rgba(27,119,79,0.35), inset 0 1px 0 rgba(255,255,255,0.25);" style-hover="background:#10452F;color:#FFFFFF;">Book a free 20-minute call</a>
+      </div>
+      <div data-reveal="" data-delay="160" style="display:flex;flex-direction:column;gap:22px;padding:32px;background:#FFFFFF;backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(27,119,79,0.35);border-radius:24px;box-shadow:0 0 0 1px rgba(27,119,79,0.05), 0 24px 48px -24px rgba(11,42,29,0.07), 0 2px 6px rgba(11,42,29,0.01);">
+        <h3 style="margin:0;font-size:24px;letter-spacing:-0.025em;font-weight:600;color:#0B2A1D;">Keep it growing</h3>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#1F3D30;text-wrap:pretty;">Monthly care so your system stays current as your product grows.</p>
+        <a href="https://autom8ux.zohobookings.in/487651000000032046" target="_blank" rel="noopener" style="margin-top:auto;display:flex;justify-content:center;padding:13px 20px;border-radius:999px;background:rgba(0,0,0,0);border:1.5px solid #1B774F;color:#1B774F;font-size:15px;font-weight:600;" style-hover="background:rgba(27,119,79,0.12);color:#1B774F;">Book a call</a>
+      </div>
+    </div>
+    <div data-reveal="" style="display:flex;justify-content:center;margin-top:32px;">
+      <span style="display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,0.72);border:1px solid rgba(27,119,79,0.20);font-size:14px;color:#1F3D30;text-align:center;"><span style="width:7px;height:7px;border-radius:50%;background:#1B774F;box-shadow:0 0 0 4px rgba(27,119,79,0.15);"></span>First 5 clients: 25% off in exchange for a case study. <span style="font-weight:600;color:#1B774F;">3 spots left.</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="position:relative;padding:clamp(80px,10vw,136px) 0;scroll-margin-top:72px;border-top:1px solid rgba(11,42,29,0.06);background:#F2FFF9;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:48px;">
+    <div data-reveal="" style="flex:1 1 320px;min-width:0;">
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.72);border:1px solid rgba(27,119,79,0.18);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1B774F;">FAQ</span>
+      <h2 style="margin:20px 0 0;font-size:clamp(34px,4.6vw,56px);line-height:1.02;letter-spacing:-0.04em;font-weight:600;color:#0B2A1D;text-wrap:balance;">Questions founders ask.</h2>
+    </div>
+    <div style="flex:1.5 1 460px;min-width:0;display:flex;flex-direction:column;gap:8px;">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="5">
+        <div style="border-radius:20px;background:{{ q.bg }};border:1px solid rgba(27,119,79,0.35);box-shadow:0 0 0 1px rgba(27,119,79,0.06), 0 12px 32px -24px rgba(11,42,29,0.07);transition:background .3s ease;">
+          <button type="button" onClick="{{ q.toggle }}" aria-expanded="{{ q.expanded }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;border:0;background:rgba(0,0,0,0);cursor:pointer;text-align:left;font-family:inherit;font-size:17px;font-weight:500;letter-spacing:-0.01em;color:#0B2A1D;">
+            {{ q.q }}
+            <span style="flex-shrink:0;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:{{ q.iconBg }};color:{{ q.iconFg }};font-size:18px;line-height:1;transform:{{ q.iconRot }};transition:all .3s ease;">+</span>
+          </button>
+          <sc-if value="{{ q.isOpen }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;padding:0 66px 22px 22px;font-size:16px;line-height:1.55;color:#4A6457;">{{ q.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta" style="position:relative;padding:clamp(96px,12vw,160px) 0;overflow:hidden;background:radial-gradient(ellipse 70% 80% at 50% 50%,#228C5D 0%,#1B774F 50%,#10452F 100%);scroll-margin-top:0;">
+  <div style="position:absolute;top:-80px;left:-120px;width:560px;height:360px;border-radius:50%;background:radial-gradient(closest-side,rgba(34,140,93,0.55),rgba(34,140,93,0));pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-140px;right:-100px;width:680px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(34,140,93,0.5),rgba(34,140,93,0));pointer-events:none;"></div>
+  <div style="position:absolute;top:30%;right:20%;width:420px;height:300px;border-radius:50%;background:radial-gradient(closest-side,rgba(34,140,93,0.30),rgba(34,140,93,0));pointer-events:none;"></div>
+  <div data-reveal="" style="position:relative;max-width:900px;margin:0 auto;padding:0 24px;text-align:center;display:flex;flex-direction:column;align-items:center;">
+    <h2 style="margin:0;font-size:clamp(40px,6vw,76px);line-height:0.98;letter-spacing:-0.045em;font-weight:600;color:#FFFFFF;text-wrap:balance;">Let's make your next screen the easy one.</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:40px;">
+      <a href="https://autom8ux.zohobookings.in/487651000000032046" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:15px 24px;border-radius:999px;background:#BEFFE9;color:#10452F;font-size:15px;font-weight:600;box-shadow:0 10px 24px -10px rgba(190,255,233,0.7), inset 0 1px 0 rgba(255,255,255,0.25);" style-hover="background:#FFFFFF;color:#10452F;">Book a 20-minute call <span style="opacity:0.8;">→</span></a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;margin-top:36px;padding:8px 18px 8px 8px;border-radius:999px;background:rgba(19,83,55,0.6);border:1px solid rgba(190,255,233,0.45);">
+      <span style="width:36px;height:36px;border-radius:50%;background:#BEFFE9;color:#10452F;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;letter-spacing:0.02em;flex-shrink:0;">SS</span>
+      <span style="font-size:14px;color:rgba(255,255,255,0.9);">You'll talk to {{ founderName }}, not a sales team.</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#10452F;border-top:1px solid rgba(190,255,233,0.07);">
+  <div style="max-width:1200px;margin:0 auto;padding:48px 24px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;">
+    <img src="./brand-assets/03-autom8ux-full-white.svg" alt="{{ agencyName }}" width="162" height="36" style="display:block;height:30px;width:auto;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="https://www.linkedin.com/in/subhrajit-sarkar-ux" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(190,255,233,0.3);color:rgba(255,255,255,0.9);" style-hover="background:rgba(190,255,233,0.12);color:#FFFFFF;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+      <a href="https://x.com/xubhrajit" target="_blank" rel="noopener" aria-label="X" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(190,255,233,0.3);color:rgba(255,255,255,0.9);" style-hover="background:rgba(190,255,233,0.12);color:#FFFFFF;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.63 7.58H.49l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.48 3.24H4.3l13.31 17.41z"/></svg></a>
+      <a href="mailto:subhrajit@autom8ux.com" aria-label="Email subhrajit@autom8ux.com" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(190,255,233,0.3);color:rgba(255,255,255,0.9);" style-hover="background:rgba(190,255,233,0.12);color:#FFFFFF;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6.5L20.5 7"/></svg></a>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:20px 24px 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:rgba(255,255,255,0.74);border-top:1px solid rgba(190,255,233,0.06);">
+    <span>© 2026 {{ agencyName }}. All rights reserved.</span>
+    <a href="#" style="color:rgba(255,255,255,0.74);" style-hover="color:#FFFFFF;">Privacy policy</a>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;agencyName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;autom8ux&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Copy&quot;},&quot;founderName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Subhrajit Sarkar&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Copy&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;heroLoop&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { tick: 0, w: 1280, activeStep: 0, openFaq: 0, email: '', sent: false, email2: '', sent2: false };
+
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+    this.onResize();
+    this.timer = setInterval(() => {
+      if (this.props.heroLoop === false) return;
+      this.setState(s => ({ tick: (s.tick + 1) % 3 }));
+    }, 2400);
+    this.obsTimer = setTimeout(() => this.setupObservers(), 80);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    clearInterval(this.timer);
+    clearTimeout(this.obsTimer);
+    this.io && this.io.disconnect();
+    this.stepIo && this.stepIo.disconnect();
+  }
+
+  setupObservers() {
+    if (!('IntersectionObserver' in window)) return;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (this.props.motion !== false && !reduce) {
+      const vh = window.innerHeight;
+      this.io = new IntersectionObserver(entries => entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        if (el.hasAttribute('data-draw')) el.style.clipPath = 'inset(0 0 0 0)';
+        else { el.style.opacity = '1'; el.style.transform = 'none'; }
+        this.io.unobserve(el);
+      }), { rootMargin: '0px 0px -6% 0px' });
+      document.querySelectorAll('[data-reveal],[data-draw]').forEach(el => {
+        if (el.getBoundingClientRect().top < vh * 0.92) return;
+        const d = el.getAttribute('data-delay') || 0;
+        if (el.hasAttribute('data-draw')) {
+          el.style.clipPath = 'inset(0 0 100% 0)';
+          el.style.transition = `clip-path 1.1s ease ${d}ms`;
+        } else {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(20px)';
+          el.style.transition = `opacity .8s ease ${d}ms, transform .8s cubic-bezier(.2,.7,.2,1) ${d}ms`;
+        }
+        this.io.observe(el);
+      });
+    }
+    this.stepIo = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) this.setState({ activeStep: +e.target.getAttribute('data-step') });
+    }), { rootMargin: '-45% 0px -45% 0px' });
+    document.querySelectorAll('[data-step]').forEach(el => this.stepIo.observe(el));
+  }
+
+  renderVals() {
+    const { tick, activeStep, openFaq } = this.state;
+    const NEW = '#BEFFE9', OLD = '#3A7A63';
+    const node = i => tick === i
+      ? { bg: NEW, fg: '#10452F', bd: NEW }
+      : { bg: '#135337', fg: '#FFFFFF', bd: 'rgba(190,255,233,0.45)' };
+    const [n0, n1, n2] = [node(0), node(1), node(2)];
+
+    const stepData = [
+      { kind: 'Trigger', title: 'Discover', meta: 'Week 1', desc: 'We study your brand and existing screens, write down your brand guidelines, then build a small working system and a demo. The demo shows AI tools generating screens that match your brand.', note: 'Happy with the demo? We sign the deal and move ahead.' },
+      { kind: 'Action', title: 'Build', meta: 'Weeks 2-6', desc: 'Tokens, core components and AI usage rules, in Figma and in your code.' },
+      { kind: 'Action', title: 'Prove', meta: '1 feature', desc: 'We rebuild one real feature on the system, so you see it working in production.' },
+      { kind: 'Output', title: 'Hand over and care', meta: 'Ongoing', desc: 'Docs and a walkthrough for your team, plus optional monthly care.' },
+    ];
+    const steps = stepData.map((s, i) => {
+      const on = i === activeStep;
+      return {
+        ...s, num: '0' + (i + 1), notFirst: i > 0,
+        pillBg: on ? '#1B774F' : '#FFFFFF',
+        pillBd: on ? '#1B774F' : 'rgba(11,42,29,0.1)',
+        pillShadow: on ? '0 16px 32px -14px rgba(27,119,79,0.45)' : '0 12px 28px -20px rgba(11,42,29,0.18)',
+        numBg: on ? 'rgba(255,255,255,0.18)' : 'rgba(27,119,79,0.1)',
+        numFg: on ? '#FFFFFF' : '#176543',
+        kindFg: on ? '#BEFFE9' : '#4A6457',
+        titleFg: on ? '#FFFFFF' : '#0B2A1D',
+        metaFg: on ? '#DDF5EA' : '#4A6457',
+        descFg: on ? '#1F3D30' : '#4A6457',
+        note: s.note || '',
+      };
+    });
+
+    const faqData = [
+      ['We already have a Figma file. Do we start from scratch?', 'No. We audit what you have and build on it.'],
+      ['Which AI tools does this work with?', 'Claude, Cursor and tools that read project files or connect through MCP.'],
+      ['How long does it take?', 'Audits take a week; most systems take 4 to 8 weeks.'],
+      ["What if we don't have a designer?", "That's common. The system lets developers and AI build on-brand without one."],
+      ['Can our team keep it up without you?', 'Yes. Everything is documented; monthly care is optional.'],
+    ];
+    const faqs = faqData.map(([q, a], i) => {
+      const open = openFaq === i;
+      return {
+        q, a, isOpen: open, expanded: open ? 'true' : 'false',
+        bg: open ? '#FFFFFF' : 'rgba(255,255,255,0.6)',
+        iconBg: open ? '#1B774F' : 'rgba(27,119,79,0.1)', iconFg: open ? '#FFFFFF' : '#176543',
+        iconRot: open ? 'rotate(45deg)' : 'rotate(0deg)',
+        toggle: () => this.setState(st => ({ openFaq: st.openFaq === i ? -1 : i })),
+      };
+    });
+
+    const comparisons = [
+      { typical: 'Delivers Figma files', ours: 'Delivers Figma and working code, kept in sync' },
+      { typical: 'Developers re-interpret designs', ours: 'Developers build from the same components' },
+      { typical: 'AI tools ignore your design', ours: 'AI tools follow your design rules' },
+      { typical: 'AI features feel like a black box', ours: 'Interfaces show what the AI is doing and why' },
+      { typical: 'You depend on us for every change', ours: 'Your team extends the system itself' },
+    ];
+
+    return {
+      agencyName: this.props.agencyName ?? 'autom8ux',
+      founderName: this.props.founderName ?? 'Subhrajit Sarkar',
+      showLinks: this.state.w >= 760,
+      n0Bg: n0.bg, n0Fg: n0.fg, n0Bd: n0.bd,
+      n1Bg: n1.bg, n1Fg: n1.fg, n1Bd: n1.bd,
+      n2Bg: n2.bg, n2Fg: n2.fg, n2Bd: n2.bd,
+      tokenRowBg: tick === 0 ? 'rgba(190,255,233,0.16)' : 'rgba(190,255,233,0.05)',
+      buttonBg: tick >= 1 ? NEW : OLD,
+      codeStatus: tick >= 1 ? '✓ synced from tokens' : 'updating…',
+      screenAccent: tick >= 2 ? NEW : OLD,
+      aiStatus: tick >= 2 ? 'Screen ready. Uses 14 tokens, 0 hard-coded values.' : 'Generating with your components…',
+      aiProgress: tick >= 2 ? '100%' : tick === 1 ? '62%' : '24%',
+      steps, faqs, comparisons,
+      email: this.state.email, sent: this.state.sent, notSent: !this.state.sent,
+      onEmail: e => this.setState({ email: e.target.value }),
+      onSend: e => { e.preventDefault(); this.setState({ sent: true }); },
+      email2: this.state.email2, sent2: this.state.sent2, notSent2: !this.state.sent2,
+      onEmail2: e => this.setState({ email2: e.target.value }),
+      onSend2: e => { e.preventDefault(); this.setState({ sent2: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
